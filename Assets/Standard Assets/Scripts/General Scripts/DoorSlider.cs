@@ -3,29 +3,32 @@ using System.Collections;
 
 public class DoorSlider : MonoBehaviour
 {
-	public float startX;
-	public float startY;
-	public float startZ;
+	// copy this in from the position information
+	public float startX, startY, startZ;
 	
-	public float endX;
-	public float endY;
-	public float endZ;
+	// this is where you want to end up
+	// (typically just adjust one axis' variable)
+	public float endX, endY, endZ;
 	
+	// adjust this to change the slide speed
 	public int smooth = 2;
 	
-	public bool open = false;
-		
+	public bool open = false; 	// if open, then move to the end
+	public bool active = true;	// won't move unless active is true
+	
+	// where the door is moving
 	Vector3 target;
 	
 	// Use this for initialization
 	void Start ()
 	{
-		
+		// could maybe do some stuff here to determine initial values?
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
+		// set the target based on whether door is open or not
 		if (open == false) {
 			target = new Vector3(startX, startY, startZ);
 		}
@@ -33,10 +36,14 @@ public class DoorSlider : MonoBehaviour
 		if (open == true) {
 			target = new Vector3(endX, endY, endZ);
 		}
-		//Vector3 temp = this.transform.localPosition;
-		this.transform.localPosition = Vector3.Slerp(this.transform.localPosition, target, Time.deltaTime * smooth);
+	
+		// only move if active, and slerp to move smoothly
+		if (this.active) {
+			this.transform.localPosition = Vector3.Slerp(this.transform.localPosition, target, Time.deltaTime * smooth);
+		}
 	}
 	
+	// when the player enters, this happens
 	void OnTriggerEnter(Collider other)
 	{
 		if (other.gameObject.name == "Player")
@@ -45,6 +52,7 @@ public class DoorSlider : MonoBehaviour
 		}	
 	}
 	
+	// when the player leaves, this happens
 	void OnTriggerExit(Collider other)
 	{
 		if (other.gameObject.name == "Player")
