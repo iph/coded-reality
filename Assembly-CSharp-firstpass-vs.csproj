@@ -50,6 +50,7 @@
      <Compile Include="Assets\Standard Assets\Scripts\General Scripts\DoorSlider.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\General Scripts\TerminalSwap.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\General Scripts\TerminalzSwap.cs" />
+     <Compile Include="Assets\Standard Assets\Scripts\General Scripts\TextColor.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Utility Scripts\CombineChildren.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Utility Scripts\MeshCombineUtility.cs" />
      <Compile Include="Assets\Standard Assets\Water (Basic)\Sources\Scripts\WaterSimple.cs" />

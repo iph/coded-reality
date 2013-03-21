@@ -1,0 +1,130 @@
+fileFormatVersion: 2
+guid: 5782db9c0accb8444b8f48fd71f3c6b6
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: geo_Soldier_Head_L_Eye
+    100004: geo_Soldier_Head_R_Eye
+    100006: geo_Soldier_L_Glove
+    100008: geo_Soldier_L_Shoe
+    100010: geo_Soldier_R_Glove
+    100012: geo_Soldier_R_Shoe
+    100014: pPipe1
+    100016: pPipe2
+    100018: pPipe3
+    100020: pPipe4
+    100022: pPipe5
+    100024: pPipe6
+    100026: pPipe7
+    100028: pSphere1
+    100030: Soldier
+    400000: //RootNode
+    400002: geo_Soldier_Head_L_Eye
+    400004: geo_Soldier_Head_R_Eye
+    400006: geo_Soldier_L_Glove
+    400008: geo_Soldier_L_Shoe
+    400010: geo_Soldier_R_Glove
+    400012: geo_Soldier_R_Shoe
+    400014: pPipe1
+    400016: pPipe2
+    400018: pPipe3
+    400020: pPipe4
+    400022: pPipe5
+    400024: pPipe6
+    400026: pPipe7
+    400028: pSphere1
+    400030: Soldier
+    2300000: geo_Soldier_Head_L_Eye
+    2300002: geo_Soldier_Head_R_Eye
+    2300004: geo_Soldier_L_Glove
+    2300006: geo_Soldier_L_Shoe
+    2300008: geo_Soldier_R_Glove
+    2300010: geo_Soldier_R_Shoe
+    2300012: pPipe1
+    2300014: pPipe2
+    2300016: pPipe3
+    2300018: pPipe4
+    2300020: pPipe5
+    2300022: pPipe6
+    2300024: pPipe7
+    2300026: pSphere1
+    3300000: geo_Soldier_Head_L_Eye
+    3300002: geo_Soldier_Head_R_Eye
+    3300004: geo_Soldier_L_Glove
+    3300006: geo_Soldier_L_Shoe
+    3300008: geo_Soldier_R_Glove
+    3300010: geo_Soldier_R_Shoe
+    3300012: pPipe1
+    3300014: pPipe2
+    3300016: pPipe3
+    3300018: pPipe4
+    3300020: pPipe5
+    3300022: pPipe6
+    3300024: pPipe7
+    3300026: pSphere1
+    4300000: geo_Soldier_Head_L_Eye
+    4300002: geo_Soldier_R_Shoe
+    4300004: geo_Soldier_Head_R_Eye
+    4300006: geo_Soldier_L_Glove
+    4300008: geo_Soldier_L_Shoe
+    4300010: geo_Soldier_R_Glove
+    4300012: pPipe1
+    4300014: pPipe2
+    4300016: pPipe3
+    4300018: pPipe4
+    4300020: pPipe5
+    4300022: pPipe6
+    4300024: pPipe7
+    4300026: pSphere1
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 2
+  userData: 
