@@ -4,14 +4,19 @@ using System.Collections;
 public class TerminalSwap : MonoBehaviour {
 	GameObject player;
     public Font font;
+	GameObject cube;
+	DoorSlider door;
     public GameObject otherCamera;
     TextEditor editor;
 	// Use this for initialization
     private string str = "Cube.x = 20";
     bool open;
+	bool openCube;
 	void Start () {
         open = false;
-
+		openCube = false;
+		cube = GameObject.FindGameObjectWithTag("blockpath");
+		door = (DoorSlider)GameObject.FindGameObjectWithTag("door").GetComponent("DoorSlider");
 		player = GameObject.FindGameObjectWithTag("MainCamera"); 
 	}
 	
@@ -32,11 +37,21 @@ public class TerminalSwap : MonoBehaviour {
             GUIStyle style = new GUIStyle(GUI.skin.textArea);
             style.fontSize = 20;
             style.padding = new RectOffset(10, 10, 10, 10);
+			Vector3 target = new Vector3(cube.transform.localPosition.x, cube.transform.localPosition.y, cube.transform.localPosition.z-20);
             if (font != null)
             {
                 style.font = font;
-            }
-
+	            }
+			if(Event.current.Equals (Event.KeyboardEvent("9"))){
+	            openCube = true;
+			}
+	
+	        if (openCube)
+	        {
+	            int smooth = 2;
+	            cube.transform.localPosition = Vector3.Slerp(cube.transform.localPosition, target, Time.deltaTime * smooth);
+				door.SetActive();	
+	        }
              if (Event.current.Equals(Event.KeyboardEvent("tab")) && editor.pos < 10)
             {
                 GUI.FocusControl("Terminal");

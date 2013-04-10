@@ -18,7 +18,9 @@ public class DoorSlider : MonoBehaviour
 	
 	// where the door is moving
 	Vector3 target;
-	
+	public void SetActive(){
+		active = true;
+	}
 	// Use this for initialization
 	void Start ()
 	{
