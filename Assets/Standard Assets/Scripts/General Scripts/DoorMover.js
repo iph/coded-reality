@@ -11,15 +11,13 @@ function Update (){
 	if(open == true){
 		var target = Quaternion.Euler (0, DoorOpenAngle, 0);
 		// Dampen towards the target rotation
-		transform.localRotation = Quaternion.Slerp(transform.localRotation­, target,
-		Time.deltaTime * smooth);
+		transform.localRotation = Quaternion.Slerp(transform.localRotation, target, Time.deltaTime * smooth);
 	}
 	
 	if(open == false){
 		var target1 = Quaternion.Euler (0, DoorCloseAngle, 0);
 		// Dampen towards the target rotation
-		transform.localRotation = Quaternion.Slerp(transform.localRotation­, target1,
-		Time.deltaTime * smooth);
+		transform.localRotation = Quaternion.Slerp(transform.localRotation, target1, Time.deltaTime * smooth);
 	}
 	
 	if(enter == true){
