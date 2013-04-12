@@ -56,7 +56,9 @@
      <Compile Include="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\HexUtil.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\IHyperlinkCallback.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\Speech.cs" />
+     <Compile Include="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\TerminalManager.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\TerminalSwap.cs" />
+     <Compile Include="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\TerminalTransaction.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\TerminalzSwap.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\TextColor.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Utility Scripts\CombineChildren.cs" />

@@ -1,25 +1,24 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\TerminalSwap.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\FormattedLabelTest.cs">
     <Files>
+      <File FileName="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\TerminalManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\TextColor.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Scripts\General Scripts\PauseMenu.js" Line="1" Column="1" />
       <File FileName="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\Speech.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Scripts\General Scripts\LightAlert.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\TextColor.cs" Line="14" Column="34" />
-      <File FileName="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\TerminalSwap.cs" Line="19" Column="22" />
-      <File FileName="Assets\Standard Assets\Scripts\General Scripts\DoorSlider.cs" Line="21" Column="22" />
+      <File FileName="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\TerminalSwap.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Scripts\General Scripts\DoorSlider.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\FormattedLabelTest.cs" Line="31" Column="37" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="Assembly-CSharp-firstpass" expanded="True">
+        <State expanded="True" selected="True">
+          <Node name="Assembly-CSharp-firstpass" expanded="True" />
+          <Node name="Assembly-UnityScript-firstpass" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Standard Assets" expanded="True">
                 <Node name="Scripts" expanded="True">
-                  <Node name="General Scripts" expanded="True">
-                    <Node name="TerminalScripts" expanded="True">
-                      <Node name="TerminalSwap.cs" selected="True" />
-                    </Node>
-                  </Node>
+                  <Node name="General Scripts" expanded="True" />
                 </Node>
               </Node>
             </Node>

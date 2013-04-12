@@ -86,6 +86,7 @@ public class FancyTextArea{
         // Start with normal font
         if (normalFont != null)
         {
+            MonoBehaviour.print("IT IS NULL");
             fontStyle.font = normalFont;
         }
         else
