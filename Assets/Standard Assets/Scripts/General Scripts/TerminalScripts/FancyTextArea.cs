@@ -82,11 +82,11 @@ public class FancyTextArea{
         Font defaultFont = GUI.skin.font;
         Font newFont = null;
         GUIStyle fontStyle = new GUIStyle();
+        fontStyle.fontSize = 17;
 
         // Start with normal font
         if (normalFont != null)
         {
-            MonoBehaviour.print("IT IS NULL");
             fontStyle.font = normalFont;
         }
         else
