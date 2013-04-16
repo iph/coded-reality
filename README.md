@@ -4,6 +4,13 @@ coded-reality
 ----------------------
 Zach - Monday, Mar 4
 
+We have a lot of prefabs to work with for templating levels. **Don't try to reinvent the prefab** (it'll break our ability to use git), just instantiate (by dragging from assets->hierachy) and adjust that one if needed. Pretty much any room should be able to be made by combining **'Walls', 'Frames', and 'Doors'** (Active or Inactive). Start with a template- AllDoors, ClosedBox, DoorFrames- then remove walls/frames and add the opposite, add doors, etc.
+
+To keep working with Git easy, work on a **seperate scene** and a **seperate branch**. Then we should be able to merge without much hassle.
+ 
+----------------------
+Zach - Monday, Mar 4
+
 Unity help:
 
 If you have issues compiling and running the project after pulling from Github, try these steps:
