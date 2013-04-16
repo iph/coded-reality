@@ -86,11 +86,14 @@ public class TextColor : MonoBehaviour {
         terms.AddTextChoice("name", "20");
         terms.AddText("\n    cube.y = ");
         terms.AddTextChoice("y", "40");
+        terms.AddText("\n    cube.z = ");
+        terms.AddTextChoice("z", "60");
         terms.AddChoice("name", "80");
         terms.AddChoice("name", "90");
         terms.AddChoice("name", "10");
         terms.AddChoice("y", "20");
         terms.AddChoice("y", "40");
+        terms.AddChoice("z", "Hi");
         terms.recalculateLayout();
         terms.x = 200;
         terms.y = 400;

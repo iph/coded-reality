@@ -10,10 +10,11 @@ public class ChoiceTerminal {
     List<Terminal> choices;
     Dictionary<string, int> choiceNames;
     Dictionary<string, Color> terminalColor;
+    Dictionary<string, Terminal> currentlySelected;
     Dictionary<Terminal, string> r_terminalChoice;
     Dictionary<string, List<Terminal>> terminalChoices;
     Dictionary<string, List<OnTerminalClickListener>> listeners;
-    private int randomNum;
+    private static int randomNum;
 
     // Used for random number generation. BLACK MAGIC
     private int NextInt
@@ -48,7 +49,8 @@ public class ChoiceTerminal {
     // Sucks, but gotta include that font :(
     public ChoiceTerminal(Font f)
     {
-        randomNum = 340;
+        if(randomNum == 0)
+            randomNum = 340;
         font = f;
         mainTerminal = this.initTerm();
         choices = new List<Terminal>();
@@ -58,6 +60,7 @@ public class ChoiceTerminal {
         listeners = new Dictionary<string, List<OnTerminalClickListener>>();
         terminalColor = new Dictionary<string, Color>();
         defaultColor = new Color(223f / 255f, 229f / 255f, 237f / 255f);
+        currentlySelected = new Dictionary<string, Terminal>();
     }
 
     /*
@@ -79,10 +82,17 @@ public class ChoiceTerminal {
      *
      *      param choice: name of the choice.
      */          
-    public void AddChoice(string handle, string choice)
+    public void AddChoice(string handle, string choice, bool isSelected = false)
     {
+     
         Terminal t = initTerm();
-        t.ChangeColor(terminalColor[handle]);
+        if (isSelected)
+        {
+            currentlySelected[handle] = t;
+            t.ChangeColor(TerminalManager.fromHSV(0, 0, 74));
+        }
+        else
+            t.ChangeColor(terminalColor[handle]);
         // This means it is always the 4th position in the array.
         t.AddText(choice);
         t.finish();
@@ -90,7 +100,9 @@ public class ChoiceTerminal {
         r_terminalChoice[t] = handle;
         terminalChoices[handle].Add(t);
         choices.Add(t);
+
     }
+
 
     /*
      * AddTextChoice(handle, defaultChoice)
@@ -106,6 +118,7 @@ public class ChoiceTerminal {
         choiceNames[handle] = position;
         terminalChoices[handle] = new List<Terminal>();
         listeners[handle] = new List<OnTerminalClickListener>();
+        AddChoice(handle, defaultChoice, true);
     }
     /*
      * Draw();
@@ -124,15 +137,11 @@ public class ChoiceTerminal {
     {
         Vector2 mouse = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
         mouse.y = Screen.height - mouse.y;
-        Screen.showCursor = true;
         foreach (Terminal t in choices)
         {
             if (t.Area.Contains(mouse) && Input.GetMouseButtonUp(0))
             {
                 SelectChoice(t, mainTerminal);
-                foreach (OnTerminalClickListener listener in listeners[r_terminalChoice[t]])
-                {
-                }
             }
             else if (t.Area.Contains(mouse))
             {
@@ -150,15 +159,19 @@ public class ChoiceTerminal {
     {
         int mainPosition = choiceNames[r_terminalChoice[choice]];
         string choiceText = choice.getText(3);
-        MonoBehaviour.print(choiceText);
         // Notify all listeners
         foreach (OnTerminalClickListener listener in listeners[r_terminalChoice[choice]])
         {
             listener.onClick(choiceText, mainTerminal.getText(mainPosition));
         }
 
-        choice.changeText(3, mainTerminal.getText(mainPosition));
+        //choice.changeText(3, mainTerminal.getText(mainPosition));
+        Terminal oldVal = currentlySelected[r_terminalChoice[choice]];
+        oldVal.changeText(2, Terminal.ColorToHex(terminalColor[r_terminalChoice[choice]]));
+        currentlySelected[r_terminalChoice[choice]] = choice;
         mainTerminal.changeText(mainPosition, choiceText);
+        choice.changeText(2, "#A6A6A6FF");
+        recalculateLayout();
     }
 
     /*

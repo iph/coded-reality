@@ -1,13 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\Speech.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Scripts\General Scripts\PauseMenu.js">
     <Files>
+      <File FileName="Assets\Standard Assets\Scripts\General Scripts\PauseMenu.js" Line="23" Column="1" />
+      <File FileName="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\TextColor.cs" Line="1" Column="1" />
       <File FileName="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\TerminalTransaction.cs" Line="1" Column="1" />
       <File FileName="Assets\Standard Assets\Scripts\General Scripts\MainMenu.js" Line="1" Column="1" />
       <File FileName="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\TerminalManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\TextColor.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Scripts\General Scripts\PauseMenu.js" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\Speech.cs" Line="53" Column="9" />
+      <File FileName="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\Speech.cs" Line="42" Column="14" />
       <File FileName="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\TerminalSwap.cs" Line="1" Column="1" />
       <File FileName="Assets\Standard Assets\Scripts\General Scripts\DoorSlider.cs" Line="1" Column="1" />
       <File FileName="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\FormattedLabelTest.cs" Line="1" Column="1" />
@@ -21,9 +21,18 @@
               <Node name="Standard Assets" expanded="True">
                 <Node name="Scripts" expanded="True">
                   <Node name="General Scripts" expanded="True">
-                    <Node name="TerminalScripts" expanded="True">
-                      <Node name="Speech.cs" selected="True" />
-                    </Node>
+                    <Node name="TerminalScripts" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+          <Node name="Assembly-UnityScript-firstpass" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Standard Assets" expanded="True">
+                <Node name="Scripts" expanded="True">
+                  <Node name="General Scripts" expanded="True">
+                    <Node name="PauseMenu.js" selected="True" />
                   </Node>
                 </Node>
               </Node>

@@ -200,7 +200,7 @@ public class Terminal{
      * ColorToHex(Color c)
      *      A nice little helper function that takes a Color objects and turns it into #RRGGBBAA form.
      */
-    private static string ColorToHex(Color c)
+    public static string ColorToHex(Color c)
     {
         string red = ((int)(c.r*255)).ToString("X2");
         string green = ((int)(c.g*255)).ToString("X2");
