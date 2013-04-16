@@ -55,6 +55,7 @@
      <Compile Include="Assets\Standard Assets\Scripts\Camera Scripts\SmoothLookAt.js" />
      <Compile Include="Assets\Standard Assets\Scripts\General Scripts\DoorMover.js" />
      <Compile Include="Assets\Standard Assets\Scripts\General Scripts\MainMenu.js" />
+     <Compile Include="Assets\Standard Assets\Scripts\General Scripts\MovementUIController.js" />
      <Compile Include="Assets\Standard Assets\Scripts\General Scripts\PauseMenu.js" />
      <Compile Include="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\DragRigidbody.js" />
      <None Include="Assets\Nobiax Free Textures 01\Nobiax Free Textures 01.txt" />

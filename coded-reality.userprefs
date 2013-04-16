@@ -1,5 +1,6 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Scripts\General Scripts\PauseMenu.js">
     <Files>
       <File FileName="Assets\Standard Assets\Scripts\General Scripts\PauseMenu.js" Line="23" Column="1" />
@@ -39,6 +40,15 @@
             </Node>
           </Node>
         </State>
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Scripts\General Scripts\DoorMover.js">
+    <Files>
+      <File FileName="Assets\Standard Assets\Scripts\General Scripts\DoorMover.js" Line="20" Column="105" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True" selected="True" />
+>>>>>>> ff2489da20217f513213684dbf866d9a0f2f867b
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
