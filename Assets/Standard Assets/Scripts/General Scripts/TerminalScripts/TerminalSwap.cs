@@ -8,18 +8,21 @@ public class TerminalSwap : MonoBehaviour, OnTerminalClickListener {
 	DoorSlider door;
     public GameObject otherCamera;
     TextEditor editor;
+    Vector3 originalPos;
     ChoiceTerminal terms;
     ChoiceTerminal doorTerminal;
+    float x, y;
     bool isTabbed;
 	// Use this for initialization
     private string str = "Cube.x = 20";
     bool open;
-    bool doorUnlock;
+    bool doorUnlockX, doorUnlockY;
 	bool openCube;
 	void Start () {
         isTabbed = false;
         open = false;
-        doorUnlock = false;
+        doorUnlockX = false;
+        doorUnlockY = false;
         terms = new ChoiceTerminal(font);
         doorTerminal = new ChoiceTerminal(font);
 		openCube = false;
@@ -31,25 +34,28 @@ public class TerminalSwap : MonoBehaviour, OnTerminalClickListener {
         terms.AddTextChoice("name", "20");
         terms.AddText("\n    cube.y = ");
         terms.AddTextChoice("y", "40");
-        terms.AddChoice("name", "80");
-        terms.AddChoice("name", "90");
-        terms.AddChoice("name", "10");
-        terms.AddChoice("y", "20");
-        terms.AddChoice("y", "40");
+        terms.AddChoice("name", "22");
+        terms.AddChoice("name", "24");
+        terms.AddChoice("name", "300");
+        terms.AddChoice("y", "50");
+        terms.AddChoice("y", "100");
         terms.recalculateLayout();
-        terms.x = 200;
+        terms.x = 100;
         terms.y = 400;
         terms.addOnTerminalClickListener("name", this);
+        terms.addOnTerminalClickListener("y", this);
 
+        originalPos = new Vector3(80.85552f, 6.947796f, 76.70168f);
         doorTerminal.AddText("lock_up_dude()\nunlock_door(");
         doorTerminal.AddTextChoice("door_val", "false");
         doorTerminal.AddChoice("door_val", "true");
         doorTerminal.AddChoice("door_val", "maybe");
         doorTerminal.AddChoice("door_val", "explode");
- 
+
+        doorTerminal.addOnTerminalClickListener("door_val", this);
         // A special way to add your own colored text without tagging it as a choice.
         doorTerminal.AddText(")\nlaugh_maniacally_at_test_subject("+Terminal.ColorToHex(TerminalManager.fromHSV(6, 43, 90)) +"true" + "#!" + ")");
-        doorTerminal.x = 200;
+        doorTerminal.x = 100;
         doorTerminal.y = 500;
        doorTerminal.recalculateLayout();
 
@@ -57,22 +63,65 @@ public class TerminalSwap : MonoBehaviour, OnTerminalClickListener {
 	public void onClick(string newtext, string old){
         if (newtext.Equals("20"))
         {
-            doorUnlock = false;
-            Vector3 originalPos = new Vector3(80.85552f, 6.947796f, 76.70168f);
+            doorUnlockX = false;
+            originalPos.z = 76.70168f;
             cube.transform.position = originalPos;
         }
-        else
+        else if(newtext.Equals("22"))
         {
-            doorUnlock = true;
-            cube.transform.position = new Vector3(0, 0, 0);
+            doorUnlockX = false;
+            originalPos.z = 74.70168f;
+            cube.transform.position = originalPos;
         }
+        else if (newtext.Equals("24"))
+        {
+            doorUnlockX = false;
+            originalPos.z = 72.70168f;
+            cube.transform.position = originalPos;
+        }
+        else if (newtext.Equals("40"))
+        {
+            doorUnlockY = false;
+            originalPos.y = 6.947796f;
+            cube.transform.position = originalPos;
+ 
+        }
+        else if (newtext.Equals("50"))
+        {
+            doorUnlockY = false;
+            originalPos.y = 7.947796f;
+            cube.transform.position = originalPos;
+ 
+        }
+        else if (newtext.Equals("100"))
+        {
+            doorUnlockY = true;
+            originalPos.y = 97.947796f;
+            cube.transform.position = originalPos;
+ 
+        }
+        else if (newtext.Equals("true"))
+        {
+            door.active = true;
+        }
+        else if (newtext.Equals("false"))
+        {
+            door.active = false;
+        }
+        else if (newtext.Equals("300"))
+        {
+            doorUnlockX = true;
+            originalPos.z = 1072.70168f;
+            cube.transform.position = originalPos;
+        }
+
     }
 	// Update is called once per frame
 	void Update () {
         if (open)
         {
             terms.MouseHandler();
-            if (doorUnlock)
+            if (doorUnlockX || doorUnlockY)
             {
                 doorTerminal.MouseHandler();
             }
@@ -96,7 +145,7 @@ public class TerminalSwap : MonoBehaviour, OnTerminalClickListener {
 	            int smooth = 2;
 				door.SetActive();	
 	        }
-            if (doorUnlock)
+            if (doorUnlockX || doorUnlockY)
             {
                 doorTerminal.Draw();
             }

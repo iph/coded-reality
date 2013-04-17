@@ -1,61 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Scripts\General Scripts\PauseMenu.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\Speech.cs">
     <Files>
-      <File FileName="Assets\Standard Assets\Scripts\General Scripts\PauseMenu.js" Line="23" Column="1" />
-      <File FileName="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\TextColor.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\TerminalTransaction.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Scripts\General Scripts\MainMenu.js" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\TerminalManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\Speech.cs" Line="42" Column="14" />
-      <File FileName="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\TerminalSwap.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Scripts\General Scripts\DoorSlider.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\FormattedLabelTest.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\FancyTextArea.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Scripts\General Scripts\DoorMover.js" Line="22" Column="85" />
+      <File FileName="Assets\Standard Assets\Scripts\General Scripts\TerminalScripts\Speech.cs" Line="39" Column="22" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="Assembly-CSharp-firstpass" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Standard Assets" expanded="True">
-                <Node name="Scripts" expanded="True">
-                  <Node name="General Scripts" expanded="True">
-                    <Node name="TerminalScripts" expanded="True" />
-                  </Node>
-                </Node>
-              </Node>
-            </Node>
-          </Node>
-          <Node name="Assembly-UnityScript-firstpass" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Standard Assets" expanded="True">
-                <Node name="Scripts" expanded="True">
-                  <Node name="General Scripts" expanded="True">
-                    <Node name="PauseMenu.js" selected="True" />
-                  </Node>
-                </Node>
-              </Node>
-            </Node>
-          </Node>
-        </State>
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Scripts\General Scripts\DoorMover.js">
-    <Files>
-      <File FileName="Assets\Standard Assets\Scripts\General Scripts\DoorMover.js" Line="20" Column="105" />
-    </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True" selected="True" />
->>>>>>> ff2489da20217f513213684dbf866d9a0f2f867b
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/RedDragon/Dropbox/github/coded-reality/Assets/Standard Assets/Character Controllers/Sources/Scripts/ThirdPersonController.js" line="193" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
